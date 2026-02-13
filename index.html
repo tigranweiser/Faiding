@@ -30,6 +30,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* Glow Effect for the Image */
+        .img-container {
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .img-container:hover {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+            transform: scale(1.02);
+        }
+
         /* Legal Modal Styles */
         .legal-modal-bg {
             display: none;
@@ -83,8 +92,8 @@
 
             <div class="relative" data-aos="zoom-in-up" data-aos-duration="1200">
                 <div class="absolute -inset-4 bg-blue-600/10 rounded-full blur-3xl"></div>
-                <div class="relative rounded-3xl overflow-hidden glass aspect-[4/5] shadow-2xl">
-                    <img src="https://via.placeholder.com/800x1000/111/fff?text=Tigran+Weiser" alt="Tigran Weiser" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
+                <div class="relative rounded-3xl overflow-hidden glass aspect-[4/5] shadow-2xl img-container">
+                    <img src="Tigran.png" alt="Tigran Weiser" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
                 </div>
             </div>
         </div>
@@ -94,7 +103,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-20 items-center">
                 <div data-aos="fade-up">
-                    <h2 class="text-4xl font-bold mb-8">Why Domains Matter <br>In a Crowded Market</h2>
+                    <h2 class="text-4xl font-bold mb-8 uppercase tracking-tight">Why Domains Matter <br>In a Crowded Market</h2>
                     <p class="text-gray-400 mb-6 leading-relaxed">
                         In the digital age, your domain is your virtual storefront. A premium .com domain instantly builds trust, reduces marketing costs, and ensures you own your category.
                     </p>
@@ -117,14 +126,14 @@
 
     <section class="py-32 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-16" data-aos="fade-up">Strategic Digital Assets</h2>
+            <h2 class="text-4xl font-bold mb-16 uppercase tracking-tight" data-aos="fade-up">Strategic Digital Assets</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="p-10 glass rounded-3xl text-left" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4">Market Leadership</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Market Leadership</h3>
                     <p class="text-gray-400">Own the primary keyword in your industry and force competitors to settle for second best.</p>
                 </div>
                 <div class="p-10 glass rounded-3xl text-left" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-4">Investment Grade</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Investment Grade</h3>
                     <p class="text-gray-400">Premium domains are digital real estate that appreciates over time, providing both utility and value.</p>
                 </div>
             </div>
@@ -133,9 +142,9 @@
 
     <footer class="py-20 px-6 text-center border-t border-white/5">
         <div data-aos="fade-in">
-            <h2 class="text-5xl font-extrabold mb-8 tracking-tighter">Let's Talk Business.</h2>
-            <a href="mailto:tigran.weiser03@gmail.com" class="text-blue-500 text-xl hover:text-white transition underline underline-offset-8">
-                tigran.weiser03@gmail.com
+            <h2 class="text-5xl font-extrabold mb-8 tracking-tighter uppercase">Inquiries & Information</h2>
+            <a href="mailto:tigran@faiding.com" class="text-blue-500 text-xl md:text-3xl font-bold hover:text-white transition underline underline-offset-8">
+                tigran@faiding.com
             </a>
             <div class="mt-16 flex justify-center gap-8 text-xs uppercase tracking-widest text-gray-600">
                 <button onclick="openLegal('modal-priv')" class="hover:text-white transition">Privacy Policy / Legal</button>
@@ -149,21 +158,12 @@
             <h1>Datenschutzerklärung</h1>
             
             <h2>1. Datenschutz auf einen Blick</h2>
-            <h3>Allgemeine Hinweise</h3>
-            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
-            
-            <h3>Datenerfassung auf dieser Website</h3>
-            <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
-            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.</p>
+            <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.</p>
             
             <h2>2. Hosting</h2>
             <p>Wir hosten die Inhalte unserer Website bei einem externen Anbieter (Hoster). Die personenbezogenen Daten werden auf den Servern des Hosters gespeichert.</p>
 
-            <h2>3. Affiliate-Links und Partnerprogramme</h2>
-            <p>Einige Links sind Affiliate-Links. Wenn Sie über einen solchen Link etwas erwerben, erhalte ich eine Provision.</p>
-
-            <h2>4. Allgemeine Hinweise und Pflichtinformationen</h2>
-            <h3>Hinweis zur verantwortlichen Stelle</h3>
+            <h2>3. Kontaktinformationen</h2>
             <p>
                 Tigran Weiser<br>
                 Hausener Straße 17<br>
@@ -185,7 +185,6 @@
             document.body.style.overflow = 'hidden';
         }
         
-        // Modal logic for closing when background is clicked
         window.onclick = function(event) {
             if (event.target.classList.contains('legal-modal-bg')) {
                 event.target.style.display = 'none';
